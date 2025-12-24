@@ -36,7 +36,7 @@ def set_bg_image(image_path):
     except FileNotFoundError:
         st.warning("Background image not found. Running without background.")
 
-set_bg_image("credit_card_app_check.jpg")
+set_bg_image("credit_card_check.png")
 
 # --------------------------------------------------
 # Global CSS (overlay + button + alerts)
