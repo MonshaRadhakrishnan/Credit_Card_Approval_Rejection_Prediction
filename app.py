@@ -13,21 +13,33 @@ st.write(
 )
 
 # ---- User Inputs (MATCH training features exactly) ----
-gender = st.radio("Applicant Gender", ["Male", "Female"])
+gender = st.radio("Applicant_Gender", ["Male", "Female"])
 gender_encoded = 1 if gender == "Male" else 0
+age = st.number_input("Applicant_Age",min_value=18)
 income = st.number_input("Total_Income", min_value=0)
 good_debt = st.number_input("Total_Good_Debt", min_value=0)
 bad_debt = st.number_input("Total_Bad_Debt", min_value=0)
 credit_score = good_debt-bad_debt
 
 # Convert to DataFrame
-input_df = pd.DataFrame([{
-    "gender": gender,
-    "income": income,
-    "good_debt": good_debt,
-    "bad_debt": bad_debt,
-    "credit_score": credit_score
-}])
+input_df = pd.DataFrame(
+    [[
+        gender_encoded,
+        age,
+        income,
+        bad_debt,
+        good_debt,
+        credit_score
+    ]],
+    columns=[
+        "Applicant_Gender",
+        "Applicant_Age",
+        "Total_Income",
+        "Total_Bad_Debt",
+        "Total_Good_Debt",
+        "Total_Credit_Score"
+    ]
+)
 
 # ---- Prediction ----
 threshold = st.slider(
