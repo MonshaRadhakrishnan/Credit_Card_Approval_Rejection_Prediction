@@ -6,6 +6,14 @@ Exploratory analysis was performed using Tableau for clear, stakeholder friendly
 **ML Model Results:**
 
 <img width="424" height="305" alt="image" src="https://github.com/user-attachments/assets/9a09079e-32d6-4a25-9b07-198d37109a43" />
+
+### my positive class is 1 and negative class is 0 here
+### True negative = 21, False Positive = 5, False Negative = 1, True Positive = 4999
+### Since this is a credit card approval problem, reducing false positives (5) is more important than reducing false negatives (1)
+### Approving a credit card for a high-risk customer can result in financial loss, while rejecting a low-risk customer mainly leads to missed opportunity.
+### So the model evaluation focuses more on Recall rather than overall accuracy
+Going with Decision Tree and Random forest to improve RECALL thus reducing False Positives.
+
 <img width="426" height="304" alt="image" src="https://github.com/user-attachments/assets/c5689a7d-3943-49c3-80df-09d81e9c9917" />
 <img width="413" height="299" alt="image" src="https://github.com/user-attachments/assets/d7453442-edec-448d-86cb-c46e6ad2952f" />
 
