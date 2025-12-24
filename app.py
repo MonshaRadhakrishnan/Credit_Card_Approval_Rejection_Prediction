@@ -99,9 +99,11 @@ model = joblib.load("credit_approval_rfmodel.pkl")
 # --------------------------------------------------
 st.title("Credit Card Approval Prediction")
 
-st.write(
-        "Fill in the applicant details below to evaluate eligibility.<br>"
-        "The total credit score, derived from good and bad debt history, helps indicate approval likelihood."
+st.markdown(
+    """
+    Fill in the applicant details below to evaluate eligibility.  
+    The total credit score, derived from good and bad debt history, helps indicate approval likelihood.
+    """
 )
 
 st.markdown("---")
