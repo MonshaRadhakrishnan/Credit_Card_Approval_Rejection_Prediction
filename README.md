@@ -3,6 +3,14 @@ This project analyzes credit card approval data to understand key risk factors a
 
 Exploratory analysis was performed using Tableau for clear, stakeholder friendly visualizations, while machine learning models were built using Python.
 
+**ML Model Results:**
+
+<img width="424" height="305" alt="image" src="https://github.com/user-attachments/assets/9a09079e-32d6-4a25-9b07-198d37109a43" />
+<img width="426" height="304" alt="image" src="https://github.com/user-attachments/assets/c5689a7d-3943-49c3-80df-09d81e9c9917" />
+<img width="413" height="299" alt="image" src="https://github.com/user-attachments/assets/d7453442-edec-448d-86cb-c46e6ad2952f" />
+
+
+
 **Detailed exploratory analysis and business insights were developed using Tableau, focusing on:**
 Approval vs rejection trends
 Segment wise risk analysis
