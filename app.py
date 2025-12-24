@@ -56,3 +56,9 @@ if st.button("Predict"):
         st.success(f"Approved | Approval Probability: {prob:.2f}")
     else:
         st.error(f"Rejected | Risk Probability: {1 - prob:.2f}")
+
+st.write("Model expects:")
+st.write(model.feature_names_in_)
+
+st.write("Streamlit input columns:")
+st.write(input_df.columns.tolist())
