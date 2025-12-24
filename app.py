@@ -99,9 +99,15 @@ model = joblib.load("credit_approval_rfmodel.pkl")
 # --------------------------------------------------
 st.title("Credit Card Approval Prediction")
 
-st.write(
-    "This model predicts credit card approval while prioritizing precision "
-    "to minimize risky approvals."
+st.markdown(
+    """
+    <p style='font-size: 16px; color: #dddddd; text-align: center;'>
+        Fill in the applicant details below to evaluate eligibility.<br><br>
+        The total credit score is calculated based on good and bad debt history.<br><br>
+        In general, applicants with a positive total credit score are more likely to receive approval.
+    </p>
+    """,
+    unsafe_allow_html=True
 )
 
 st.markdown("---")
@@ -148,3 +154,14 @@ if st.button("Predict"):
         st.success(f" APPROVED\n\nApproval Probability: {prob:.2f} \n\nYour Total Credit Score is: {credit_score}")
     else:
         st.error(f" REJECTED\n\nRisk Probability: {1 - prob:.2f} \n\nYour Total Credit Score is: {credit_score}")
+
+st.markdown(
+    """
+    <hr>
+    <p style='font-size: 13px; color: #cccccc; text-align: center;'>
+        This application is built using a synthetic dataset for demonstration and learning purposes.
+        It does not represent real customer data or real-world credit decisioning systems.
+    </p>
+    """,
+    unsafe_allow_html=True
+)
