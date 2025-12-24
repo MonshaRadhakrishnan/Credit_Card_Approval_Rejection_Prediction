@@ -144,15 +144,7 @@ FIXED_THRESHOLD = 0.7  # Business-defined decision rule
 if st.button("Predict"):
     prob = model.predict_proba(input_df)[0][1]
 
-if prob >= FIXED_THRESHOLD:
-    st.success(
-        f"APPROVED\n\n"
-        f"Approval Probability: {prob:.2f}\n\n"
-        f"Total Credit Score: {credit_score}"
-    )
-else:
-    st.error(
-        f"REJECTED\n\n"
-        f"Risk Probability: {1 - prob:.2f}\n\n"
-        f"Total Credit Score: {credit_score}"
-    )
+    if prob >= FIXED_THRESHOLD:
+        st.success(f" APPROVED\n\nApproval Probability: {prob:.2f} \n\nYour Total Credit Score is: {credit_score}")
+    else:
+        st.error(f" REJECTED\n\nRisk Probability: {1 - prob:.2f} \n\nYour Total Credit Score is: {credit_score}")
