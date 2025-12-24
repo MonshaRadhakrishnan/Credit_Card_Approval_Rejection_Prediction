@@ -101,8 +101,7 @@ st.title("Credit Card Approval Prediction")
 
 st.write(
         "Fill in the applicant details below to evaluate eligibility"
-        "The total credit score is calculated based on good and bad debt history"
-        "In general, applicants with a positive total credit score are more likely to receive approval"
+        "The total credit score, derived from good and bad debt history, helps indicate approval likelihood."
 )
 
 st.markdown("---")
