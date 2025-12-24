@@ -1,6 +1,45 @@
 import streamlit as st
+import base64
 import pandas as pd
 import joblib
+
+def set_bg_image(image_path):
+    with open(image_path, "rb") as image_file:
+        encoded = base64.b64encode(image_file.read()).decode()
+
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background-image: url("data:image/png;base64,{encoded}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+set_bg_image("credit_card_check.png")
+
+st.markdown(
+    """
+    <style>
+    .block-container {
+        background-color: rgba(0, 0, 0, 0.55);
+        padding: 2rem;
+        border-radius: 12px;
+    }
+
+    h1, h2, h3, label, p {
+        color: white !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Load trained model
 model = joblib.load("credit_approval_rfmodel.pkl")
