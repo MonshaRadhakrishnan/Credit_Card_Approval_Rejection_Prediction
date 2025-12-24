@@ -139,7 +139,7 @@ st.markdown("---")
 # Prediction (FIXED THRESHOLD)
 # --------------------------------------------------
 FIXED_THRESHOLD = 0.7  # Business-defined decision rule
-)
+
 
 if st.button("Predict"):
     prob = model.predict_proba(input_df)[0][1]
